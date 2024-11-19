@@ -14,7 +14,7 @@ import { useRef } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 function App() {
-  const navigate = useNavigate(); // useNavigate hook for programmatic navigation
+  const navigate = useNavigate(); 
   const [input, setInput] = useState("");
   const msgEnd = useRef(null);
   const [messages, setMessages] = useState([
