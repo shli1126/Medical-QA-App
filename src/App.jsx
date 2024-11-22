@@ -1,20 +1,15 @@
 import "./App.css";
 import gptLogo from "./assets/chatgpt.svg";
 import addBtn from "./assets/add-30.png";
-import msgIcon from "./assets/message.svg";
-import home from "./assets/home.svg";
-import saved from "./assets/bookmark.svg";
-import rocket from "./assets/rocket.svg";
 import sendBtn from "./assets/send.svg";
 import userIcon from "./assets/user-icon.png";
 import gptImgLogo from "./assets/chatgptLogo.svg";
 import { sendMsgToOpenAI } from "./openai";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function App() {
-  const navigate = useNavigate(); 
   const [input, setInput] = useState("");
   const msgEnd = useRef(null);
   const [messages, setMessages] = useState([
@@ -23,6 +18,9 @@ function App() {
       isBot: true,
     },
   ]);
+
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [transcriptionText, setTranscriptionText] = useState("");
 
   useEffect(() => {
     msgEnd.current.scrollIntoView();
@@ -41,8 +39,44 @@ function App() {
   };
 
   const handleEnter = async (e) => {
-    if (e.key == 'Enter') await handleSend()
-  }
+    if (e.key === "Enter") await handleSend();
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    console.log(file);
+    if (file) {
+      setSelectedFile(file);
+      transcribeFile(file);
+    }
+  };
+
+  const transcribeFile = async (file) => {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("model", "whisper-1");
+
+    try {
+      const response = await axios.post(
+        "https://api.openai.com/v1/audio/transcriptions",
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+          },
+        }
+      );
+
+      console.log("Transcription:", response.data.text);
+      setTranscriptionText(response.data.text);
+    } catch (error) {
+      if (error.response) {
+        console.error("Error in transcription:", error.response.data);
+      } else {
+        console.error("Error in transcription:", error.message);
+      }
+    }
+  };
 
   return (
     <div className="App">
@@ -53,38 +87,34 @@ function App() {
             <span className="brand">Medical Q&A App</span>
           </div>
 
-          <button className="midBtn" onClick={() => {window.location.reload()}}>
+          <button
+            className="midBtn"
+            onClick={() => {
+              window.location.reload();
+            }}
+          >
             <img src={addBtn} alt="new chat" className="addBtn" />
             New Chat
           </button>
 
-          {/* <div className="upperSideBottom">
-            <button className="query">
-              <img src={msgIcon} alt="Query" />
-              What is programming?
-            </button>
-
-            <button className="query">
-              <img src={msgIcon} alt="Query" />
-              How to use Api?
-            </button>
-          </div> */}
+          <input
+            type="file"
+            accep=".mp3,.mp4,.mpeg,.mpga,.m4a,.wav,.webm"
+            onChange={handleFileChange}
+          />
+          {transcriptionText && (
+            <div>
+              <h2>Transcription Result:</h2>
+              <p>{transcriptionText}</p>
+            </div>
+          )}
         </div>
-
-        {/* <div className="lowerSide">
-          <div className="listItems" >
-            <img src={home} alt="Home" className="listItemsImg" />
-            Home
-          </div>
-          <div className="listItems">
-            <img src={saved} alt="Saved" className="listItemsImg" />
-            Saved
-          </div>
-          <div className="listItems">
-            <img src={rocket} alt="Upgrade" className="listItemsImg" />
-            Upgrade to Pro
-          </div>
-        </div> */}
+        <div>
+          <h1>Med 277 Team #5</h1>
+          <h1>Anmol Budhiraja</h1>
+          <h1>Hitvarth Diwanji</h1>
+          <h1>Shaolong Li</h1>
+        </div>
       </div>
 
       <div className="main">
@@ -104,6 +134,7 @@ function App() {
 
         <div className="chatFooter">
           <div className="inp">
+
             <input
               type="text"
               placeholder="Send a message"
@@ -113,6 +144,7 @@ function App() {
                 setInput(e.target.value);
               }}
             />
+            
             <button className="send" onClick={handleSend}>
               <img src={sendBtn} alt="Send" />
             </button>
