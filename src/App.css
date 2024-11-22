@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  background: rgb(3, 0, 31);
-  color: white;
+  background: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
   font-family: "Poppins", sans-serif;
 }
 
@@ -21,7 +21,7 @@ body {
 
 .sideBar {
   flex: 3;
-  border-right: 1px solid rgb(100, 100, 100);
+  border-right: 1px solid rgb(0, 0, 0);
 }
 
 .main {
@@ -38,7 +38,7 @@ body {
 
 .upperSide {
   padding: 2.5rem;
-  border-bottom: 1px solid rgb(100, 100, 100);
+  border-bottom: 1px solid rgb(255, 255, 255);
   height: 70%;
 }
 
@@ -54,7 +54,7 @@ body {
 }
 
 .midBtn {
-  background: #5a4bff;
+  background: rgba(82, 82, 82, 0.579);
   border: none;
   color: white;
   padding: 1.5rem;
@@ -68,16 +68,21 @@ body {
   border-radius: 0.5rem;
 }
 
+.midBtn:hover {
+  background-color: rgba(82, 82, 82, 0.813); /* New background color on hover */
+  color: white;              /* Optional: Change text color on hover */
+}
+
 .query {
   display: flex;
   align-items: center;
   background: transparent;
-  color: rgba(222, 222, 222, 1);
+  color: rgb(0, 0, 0);
   padding: 1.5rem;
   width: 25rem;
   margin: 1rem auto;
   border-radius: 0.5rem;
-  border: 1px solid rgba(98, 98, 98, 1);
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .query > img {
@@ -87,7 +92,10 @@ body {
 }
 
 .lowerSide {
+  margin-top:20rem;
   padding: 2rem;
+  gap: 1rem;
+  display: flex;
 }
 
 .listItems {
@@ -95,6 +103,11 @@ body {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
+}
+
+.group {
+  margin-left: 2rem;
+  align-items: center;
 }
 
 .listItemsImg {
@@ -146,7 +159,7 @@ body {
 
 
 .bot {
-  background: rgba(28, 30, 58, 1);
+  background: rgb(255, 255, 255);
   width: fit-content;
   border-radius: 0.5rem;
 }
@@ -163,7 +176,7 @@ body {
 
 .inp {
   padding: 0.5rem;
-  background: rgba(28, 30, 58, 1);
+  background: rgba(82, 82, 82, 0.579);
   display: flex;
   align-items: center;
   border-radius: 0.5rem;
@@ -174,7 +187,7 @@ body {
   width: calc(100% - 3rem);
   outline: none;
   padding: 1.25rem;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .inp > input,
@@ -183,6 +196,13 @@ body {
   border: none;
 }
 
+
+
 .chatFooter > p {
   margin: 2rem 0;
+}
+
+.individual {
+  display: flex;
+  gap: 1rem;
 }
