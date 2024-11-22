@@ -3,4 +3,4 @@
 ### Usage:
 Create a .env file in the root directory and paste:
 
-REACT_APP_OPENAI_API_KEY=<YOUR OPENAI API KEY>
+REACT_APP_OPENAI_API_KEY=your openai api key
