@@ -2,77 +2,30 @@
  #### Retrieved Documents #### 
 
 Document 1
-Content: treatment failure rates. Accordingly, a nati onwide study on the therapeutic efficacy of 
-Sulfadoxine-Pyrimethamine for the treatment of uncomplicated falciparum malaria was 
-conducted in 11 sentinel sites from October – December 200 3. Results obtained from the 
-study showed a mean treatment failure rate of 35.9% on the 14-days follow-up and 71.8% on 
-the 28-days follow-up.  
-• This level of treatment failure rate is mu ch higher than the cut-off point recommended by 
-WHO for a treatment policy change. In-vivo therapeutic efficacy and safety baseline study on 
-artemether-lumefantrine was also conducted in 4 sites by enro lling 213 subjects and after a 
-follow-up period of 14 days, no treatment failure cases and drug side effects were reported 
- 
-i) Treatment of uncomplicated falciparum malaria: oral drugs are used can be used  
- In most tropical countries since resistance to chloroquine and Sulfadoxine-pyrimethamine is 
-well documented other drugs are recommended.
+Content: Index 1301
 
 Document 2
-Content: Internal Medicine 
- 
- 
-12
-N.B Cloroquine is no effect on the exoerythrocytic liver form (= reservoir). To protect 
-from later recurrences, chloroquine therapy should be followed by:- 
-Primaquine:  (dose: 15 mg/day over 2 weeks), which is effective against liver forms 
-and gametocytes. 
- 
-B. Treatment of P.Falciparum malaria  
-• The high treatment failure rates of chlor oquine for the treatment  of uncomplicated 
-P.falciparum malaria as docum ented through a nationwide study conducted in 1997/98 in 
-Ethiopia, led to a treatment  policy change that recommends  the use of Sulfadoxine-
-Pyrimethamine as first line drug for the treatment of uncomplicated falciparum malaria and 
-chloroquine for the treatment of vivax malaria.   
-• In subsequent years, however, unpublished re ports from isolated st udies indicated higher 
-treatment failure rates. Accordingly, a nati onwide study on the therapeutic efficacy of 
-Sulfadoxine-Pyrimethamine for the treatment of uncomplicated falciparum malaria was
+Content: 6 Preface
+Access for free at openstax.org
 
 Document 3
-Content: Dose:  15mg/kg followed by second dose of 10mg/kg after 8-12 hr 
-Side Effects : Nausea, abdominal cramp, vertigo, insomnia, sometimes acute psychosis and 
-convulsion 
-d) Sulfadoxine-pyrimethamine (oral) e.g. Fansidar -3 tablets stat as a single dose. (1 tablet = 
-500mg sulfadoxine + 25 mg pyrimethamine). Cont raindicated in children less than one year. 
-Due to high prevalence of resistance to this combination, it is not recommended for treatment of 
-P.faciparum in most tropical countries including Ethiopia. 
-–5 days (e.g 4 mg /kg for 3 days) in combination with Mefloquine 25 mg/kg 
-Treatment of Severe and complicated falciparum malaria:  
-NB: Patients should be admitted and treated in a Hospital setting  
-A)  Drug Treatment: 
-i) Quinine: is drug of choice for severe and complicated malaria. 
-Dosage and Adminstration:  
-Where IV administration of quinine is possible 
-Loading dose: Quinine 20 mg salt/kg of body weight by infusion over 4 hours, in 5 %
+Content: publication.  
+ 
+©2006 by Getachew Tizazu, Tadesse Anteneh, Yoseph Mamo, Zenebe Assefa, 
+Abere Bekela, Woldnecherkos Abebe, Fetih Mohammed, Tesfaye H/Tsion, 
+Girma Tesfaye, and Dejuma Yadeta 
+ 
+All rights reserved. Except as expressly provided above, no part of this publication may 
+be reproduced or transmitted in any form or by any means, electronic or mechanical, 
+including photocopying, recording, or by any information storage and retrieval system, 
+without written permission of the author or authors. 
+ 
+ 
+ 
+ 
+This material is intended for educational use only by practicing health care workers or 
+students and faculty in a health care field.
 
 Document 4
-Content: Internal Medicine 
- 
- 
-16
-• Travelers to malarious areas  they should start taking drugs 1 week before traveling to 
-these areas & for 4 weeks after the individual left the endemic area. 
- 
-Drugs available for prophylaxis 
-In Areas where there is chloroquine resistant P. falciparum 
-• Mefloquine 250mg/week orally, effective against multi drug resistant p. falciparum, 
-safe during pregnancy 
-• Doxycycline 100mg daily orally , not us ed for children < 8 years& during pregnancy 
-• Maloprim (Pyrimethamine+ dapson) 1 tab orally/wk 
-• Chloroquine+ proguanil combination alternative to mefloquine and doxycycline. 
- 
-In areas where there is for chloroquine sensitive P.falciparum and other” benign” malarias:                    
-• Chloroquine 2 tabs of 150 mg tablet orally every week  
-• Chloroquine+ proguanil combination can be used as an alternative 
-References: 
-1) Kasper L., Braunwald E., Harrison’s principles of Internal medicine, 16th Edition, 
-Salmonellosis, pages 1218-1232.
+Content: Burt and Deedee McMurtry Michelson 20MM Foundation National Science Foundation The Open Society Foundations Jumee Yhu and David E. Park III Brian D. Patterson USA-International Foundation The Bill and Stephanie Sick Fund Steven L. Smith & Diana T. Go Stand Together Robin and Sandy Stuart Foundation The Stuart Family Foundation Tammy and Guillermo Treviño Valhalla Charitable Foundation White Star Education Foundation Schmidt Futures William Marsh Rice University
 

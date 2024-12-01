@@ -20,8 +20,9 @@ body {
 }
 
 .sideBar {
-  flex: 3;
-  border-right: 1px solid rgb(0, 0, 0);
+  background-color: #ffcd0085;
+  padding-top: 5rem;
+  flex: 4;
 }
 
 .main {
@@ -38,7 +39,6 @@ body {
 
 .upperSide {
   padding: 2.5rem;
-  border-bottom: 1px solid rgb(255, 255, 255);
   height: 70%;
 }
 
@@ -49,12 +49,13 @@ body {
 }
 
 .addBtn {
-  height: 2rem;
-  padding-right: 1rem;
+  filter: brightness(0) invert(1);  /* This will make the SVG white */
+  width: 2.5rem;
+  margin-right: 1rem;
 }
 
 .midBtn {
-  background: rgba(82, 82, 82, 0.579);
+  background: #00629B;
   border: none;
   color: white;
   padding: 1.5rem;
@@ -124,12 +125,13 @@ body {
 }
 
 .main {
+  background-color: white;
   min-height: calc(100vh - 14rem);
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 6rem 10rem;
-  margin-bottom: 0;
+  padding: 6rem 10rem;
+  padding-bottom: 0;
 }
 
 .chats {
@@ -159,7 +161,6 @@ body {
 
 
 .bot {
-  background: rgb(255, 255, 255);
   width: fit-content;
   border-radius: 0.5rem;
 }
@@ -175,19 +176,19 @@ body {
 }
 
 .inp {
-  padding: 0.5rem;
-  background: rgba(82, 82, 82, 0.579);
+  padding: 1rem 1.5rem;
+  background: #c4c4c436;
   display: flex;
   align-items: center;
-  border-radius: 0.5rem;
+  border-radius: 15rem;
   width: 70rem;
 }
 
 .inp > input {
   width: calc(100% - 3rem);
   outline: none;
-  padding: 1.25rem;
-  color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  color: black;
 }
 
 .inp > input,
@@ -196,7 +197,23 @@ body {
   border: none;
 }
 
+.record {
+  background-color: transparent;
+  border: none;
+  border-radius: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
 
+.record:active {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
+}
+
+.send{
+  padding-right: 1rem;
+}
 
 .chatFooter > p {
   margin: 2rem 0;
