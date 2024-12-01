@@ -18,6 +18,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--query', type=str)
 parser.add_argument('--llm_model', type=str, default='gpt-4o-mini')
 parser.add_argument('--api_path', type=str, default='../openai_api.txt')
+parser.add_argument('--no_rag', action='store_true')
 args = parser.parse_args()
 
 print("Current working directory:", os.getcwd())
@@ -72,12 +73,15 @@ prompt = hub.pull("rlm/rag-prompt")
 llm_model = args.llm_model
 llm = ChatOpenAI(model=llm_model)
 
-rag_chain = (
-    {"context": retriever | format_docs, "question": RunnablePassthrough()}
-    | prompt
-    | llm
-    | StrOutputParser()
-)
+if args.no_rag:
+    rag_chain = llm | StrOutputParser()
+else:
+    rag_chain = (
+        {"context": retriever | format_docs, "question": RunnablePassthrough()}
+        | prompt
+        | llm
+        | StrOutputParser()
+    )
 
 answer = rag_chain.invoke(args.query)
 
