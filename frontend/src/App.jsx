@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import "./App.css";
 import sendBtn from "./assets/send.svg";
-import gptImgLogo from "./assets/chatgpt.svg";
 import record from "./assets/record.svg";
 import medical from "./assets/medical.svg";
 import newConversation from "./assets/new_conversation.svg";
