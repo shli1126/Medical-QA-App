@@ -2,30 +2,68 @@
  #### Retrieved Documents #### 
 
 Document 1
-Content: Index 1301
+Content: Internal Medicine 
+ 
+ 
+394
+Individuals tend to survive at extremely low hemoglobin levels (even as low as 3 gm %) due to 
+these compensatory mechanisms.  
+Therapeutic considerations and indications 
+In the management of anemic patients carefully remember the following points  
+• Identify and correct the cause of anemia  
+• Administration of Hematinines such as Iron, Vit B 12 or folate without correct diagnosis 
+of the cause of anemia is an unacceptable practice in the treatment of anemia  
+• Therapeutic modalities include: Iron, folate, Vit. B 12, pyridoxine (B 6) blood transfusion, 
+steroids (in hemolytic anemia) splenectomy, erythropoietin, bone marrow transplant 
+(aplastic anemia), and androgens 
+• Carefully weigh the risks of blood transfusion over its advantage. 
+When to transfuse blood in chronic anemia  
+1. Anemia severe enough to cause CHF (congestive heart failure) 
+2. Hypoxic manifestations: Irritability, unconsciousness, angina
 
 Document 2
-Content: 6 Preface
-Access for free at openstax.org
+Content: Internal Medicine 
+ 
+ 
+404
+References:  
+1) Kasper L., Braunwald E., Harrison’s principles of In ternal medicine, 16th Edition,  Anemia,      
+pages 586-624. 
+2) Myers R. Allen, National Medical Series for independent Study ( NMS ) 3 rd edition 
+Medicine, Anemia,  pages 109-115.
 
 Document 3
-Content: publication.  
+Content: • Decreased release of iron from macrophages to plasma,  
+• reduced RBC life span ( ∼ 80 days) in effective erythropoiesis  
+• Inadequate erythropoietin response to anemia  
+Treatment of Anemia of Chronic Dideases: 
+1. Correction of underlying disease 
+2. Erythropoietin (40-80 % success rate) 
+3. Correction of reversible contributors (iron, folate, cobalamine supplements if necessary) 
  
-©2006 by Getachew Tizazu, Tadesse Anteneh, Yoseph Mamo, Zenebe Assefa, 
-Abere Bekela, Woldnecherkos Abebe, Fetih Mohammed, Tesfaye H/Tsion, 
-Girma Tesfaye, and Dejuma Yadeta 
- 
-All rights reserved. Except as expressly provided above, no part of this publication may 
-be reproduced or transmitted in any form or by any means, electronic or mechanical, 
-including photocopying, recording, or by any information storage and retrieval system, 
-without written permission of the author or authors. 
- 
- 
- 
- 
-This material is intended for educational use only by practicing health care workers or 
-students and faculty in a health care field.
+C) Sideroblastic anemia: 
+• Refractory anemia with hypochromia with ↑ marrow iron  
+• Many pathological ring sideroblasts are found in the bone marrow  
+• Is caused by defect in hem synthesis  
+Classification: 
+• Hereditary (sex linked recessive trait) 
+• Acquired
 
 Document 4
-Content: Burt and Deedee McMurtry Michelson 20MM Foundation National Science Foundation The Open Society Foundations Jumee Yhu and David E. Park III Brian D. Patterson USA-International Foundation The Bill and Stephanie Sick Fund Steven L. Smith & Diana T. Go Stand Together Robin and Sandy Stuart Foundation The Stuart Family Foundation Tammy and Guillermo Treviño Valhalla Charitable Foundation White Star Education Foundation Schmidt Futures William Marsh Rice University
+Content: • Wrong diagnosis 
+• Mixed deficiency – associated folate or vit.B 12 deficiency  
+• Another cause for anemia e.g. malignancy, inflammation  
+• Malabsorption – rare cause 
+• Use of slow release preparations  
+Parentral iron  
+ Indications:  
+1. Oral Iron intolerance despite modification in dosage regimen 
+2. Malabsorption 
+3. Inability or unwillingness to take orally  
+• Iron-dextran complex or iron sorbitol citrate can be used Intra-muscularly or intra-venous 
+route. 
+Dose (ml) = 0.0442 (desired Hgb – Observed Hgb.) X weight (Kg.) + (0.26 x weight Kg.) 
+ 
+B)  Anemia of chronic diseases (ACD) 
+It occurs in association with a variety of chronic inflammatory and malignant diseases.
 
