@@ -1,15 +1,40 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-  }
-  
-  .title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
+  background-color: #ffcd0085;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
 
+.title {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
 
+.logo {
+  width: 6rem;
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+.startButton {
+  background: #00629B;
+  border: none;
+  color: white;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 15rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.startButton:hover {
+  transform: scale(1.05);
+  background: #005182;
+}
+
+.startButton:active {
+  transform: scale(0.95);
+}

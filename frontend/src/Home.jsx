@@ -2,14 +2,12 @@ import React from "react";
 import "./Home.css";
 import { motion } from "framer-motion";
 import medical from "./assets/medical.svg";
-import record from "./assets/record.svg";
-import sendBtn from "./assets/send.svg";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
 
-  const handleSendClick = () => {
+  const handleStartChatting = () => {
     navigate("/app");
   };
 
@@ -23,22 +21,12 @@ const Home = () => {
         transition={{ duration: 2, ease: "easeInOut" }}
       >
         <img src={medical} alt="Logo" className="logo" />
-        Welcome to ChatGP, let's chat!
+        ChatGP: Your GPT-enhanced General Practitioner!
       </motion.h1>
 
-      <div className="inp">
-        <button className="record">
-          <img src={record} alt="Record" />
-        </button>
-        <input
-          type="text"
-          placeholder={"Send a message"}
-          onClick={() => handleSendClick()}
-        />
-        <button className="send">
-          <img src={sendBtn} alt="Send" />
-        </button>
-      </div>
+      <button className="startButton" onClick={handleStartChatting}>
+        Start Chatting!
+      </button>
     </div>
   );
 };

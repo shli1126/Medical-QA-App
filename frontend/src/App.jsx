@@ -130,8 +130,13 @@ function App() {
       <div className="sideBar">
         <div className="upperSide">
           <div className="upperSideTop">
-            <img src={medical} alt="Logo" className="logo" />
-            <span className="brand"><strong>ChatGP</strong> <br/> <span style={{fontSize: "0.7em"}}>Your GPT-enhanced general practitioner</span></span>
+            <div className="titleContainer">
+              <div className="titleLine">
+                <img src={medical} alt="Logo" className="logo" />
+                <strong>ChatGP</strong>
+              </div>
+              <span className="subtitle">Your GPT-enhanced general practitioner</span>
+            </div>
           </div>
 
           <button className="midBtn" onClick={startNewConversation}>
@@ -144,13 +149,24 @@ function App() {
       <div className="main">
         <div className="chats">
           {messages.map((message, i) => (
-            <div key={i} className={message.isBot ? "chat bot" : "chat"}>
-              <img
-                className="chatImg"
-                src={message.isBot ? medical : user}
-                alt="gptlogo"
-              />
-              <p className="txt">{message.text}</p>
+            <div key={i} className={message.isBot ? "chat-container bot" : "chat-container user"}>
+              {message.isBot && (
+                <img
+                  className="chatImg"
+                  src={medical}
+                  alt="gptlogo"
+                />
+              )}
+              <div className="chat">
+                <p className="txt">{message.text}</p>
+              </div>
+              {!message.isBot && (
+                <img
+                  className="chatImg"
+                  src={user}
+                  alt="user"
+                />
+              )}
             </div>
           ))}
           <div ref={msgEnd}></div>
