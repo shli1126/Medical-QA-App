@@ -17,8 +17,21 @@ import (
 )
 
 func NewConversation(w http.ResponseWriter, r *http.Request) {
+	// Check if last conversation exists and has no messages
+	lastConv, err := db.GetLastConversation()
+	if err == nil {
+		// Check if this conversation has any messages
+		hasMessages := len(lastConv.Messages) > 0
+		if !hasMessages {
+			// Return existing empty conversation
+			json.NewEncoder(w).Encode(map[string]int{"id": lastConv.ID})
+			return
+		}
+	}
+
+	// Create new conversation if last one has messages or doesn't exist
 	conversation := models.Conversation{}
-	err := db.CreateConversation(&conversation)
+	err = db.CreateConversation(&conversation)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -115,4 +128,33 @@ func GetConversation(w http.ResponseWriter, r *http.Request) {
 	}
 
 	json.NewEncoder(w).Encode(conversation)
+}
+
+func GetRecentConversations(w http.ResponseWriter, r *http.Request) {
+	currentIDStr := r.URL.Query().Get("currentId")
+	if currentIDStr == "" {
+		http.Error(w, "currentId parameter is required", http.StatusBadRequest)
+		return
+	}
+
+	currentID, err := strconv.Atoi(currentIDStr)
+	if err != nil {
+		fmt.Printf("Error converting currentId to int: %v\n", err)
+		http.Error(w, "Invalid current ID", http.StatusBadRequest)
+		return
+	}
+
+	conversations, err := db.GetRecentConversations(currentID, 5)
+	if err != nil {
+		fmt.Printf("Error getting recent conversations: %v\n", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	if err := json.NewEncoder(w).Encode(conversations); err != nil {
+		fmt.Printf("Error encoding response: %v\n", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 }

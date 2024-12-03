@@ -17,7 +17,7 @@ func main() {
 	fmt.Println(cfg.DatabaseURL)
 	db.Initialize(cfg.DatabaseURL)
 
-	router := api.SetupRoutes()
+	router := api.RegisterRoutes()
 
 	// Create a new CORS handler
 	c := cors.New(cors.Options{

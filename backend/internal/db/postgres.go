@@ -90,3 +90,90 @@ func GetConversation(id int) (models.Conversation, error) {
 
 	return conversation, nil
 }
+
+func GetLastConversation() (*models.Conversation, error) {
+	conversation := &models.Conversation{}
+	query := `
+        SELECT id FROM conversations 
+        ORDER BY id DESC 
+        LIMIT 1
+    `
+	err := DB.QueryRow(query).Scan(&conversation.ID)
+	if err != nil {
+		return nil, err
+	}
+
+	// Get messages for this conversation
+	query = `
+        SELECT is_user, content 
+        FROM messages 
+        WHERE conversation_id = $1 
+        ORDER BY id
+    `
+	rows, err := DB.Query(query, conversation.ID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		var isUser bool
+		var content string
+		if err := rows.Scan(&isUser, &content); err != nil {
+			return nil, err
+		}
+		conversation.Messages = append(conversation.Messages, models.Message{
+			IsUser:  isUser,
+			Content: content,
+		})
+	}
+
+	return conversation, nil
+}
+
+func GetRecentConversations(currentID int, limit int) ([]models.Conversation, error) {
+	query := `
+        SELECT DISTINCT c.id 
+        FROM conversations c 
+        JOIN messages m ON c.id = m.conversation_id 
+        WHERE c.id < $1 
+        ORDER BY c.id DESC 
+        LIMIT $2
+    `
+	rows, err := DB.Query(query, currentID, limit)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var conversations []models.Conversation
+	for rows.Next() {
+		var conv models.Conversation
+		if err := rows.Scan(&conv.ID); err != nil {
+			return nil, err
+		}
+
+		// Get first message for preview
+		msgQuery := `
+            SELECT is_user, content 
+            FROM messages 
+            WHERE conversation_id = $1 
+            ORDER BY id 
+            LIMIT 1
+        `
+		var isUser bool
+		var content string
+		err = DB.QueryRow(msgQuery, conv.ID).Scan(&isUser, &content)
+		if err != nil {
+			return nil, err
+		}
+
+		conv.Messages = []models.Message{{
+			IsUser:  isUser,
+			Content: content,
+		}}
+		conversations = append(conversations, conv)
+	}
+
+	return conversations, nil
+}

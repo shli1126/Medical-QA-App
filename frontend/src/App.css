@@ -21,34 +21,24 @@ body {
 
 .sideBar {
   background-color: #ffcd0085;
-  padding-top: 5rem;.upperSide {
-    padding: 2.5rem;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .upperSideTop {
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  .titleContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .midBtn {
-    width: 80%;  /* or whatever width you prefer */
-    margin: 0 auto;
-  }
+  padding-top: 5rem;
   flex: 4;
 }
 
-.main {
-  flex: 9;
+.upperSide {
+  padding: 2.5rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upperSideTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .titleContainer {
@@ -91,42 +81,30 @@ body {
   margin-top: 0.3rem;
 }
 
-.upperSide {
-  padding: 2.5rem;
-  height: 70%;
-}
-
-.upperSideTop {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.addBtn {
-  filter: brightness(0) invert(1);  /* This will make the SVG white */
-  width: 2.5rem;
-  margin-right: 1rem;
-}
-
 .midBtn {
   background: #00629B;
   border: none;
   color: white;
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 1.5rem;
   width: 25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .midBtn:hover {
-  background-color: rgba(82, 82, 82, 0.813); /* New background color on hover */
-  color: white;              /* Optional: Change text color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.midBtn svg {
+  color: white;
+  fill: currentColor;
 }
 
 .query {
@@ -148,10 +126,70 @@ body {
 }
 
 .lowerSide {
-  margin-top:20rem;
-  padding: 2rem;
-  gap: 1rem;
+  margin-top: 0;
+  padding: 1.5rem;
+  max-height: 50%;
   display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.historyHeader {
+  color: #202123;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+  font-weight: 600;
+}
+
+.conversationList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  flex: 1;
+  min-height: 0; 
+}
+
+.conversationList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.conversationList::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.conversationList::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.conversationItem {
+  padding: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  color: #202123;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.conversationItem:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.conversationPreview {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+  font-weight: 500;
 }
 
 .listItems {
@@ -187,6 +225,7 @@ body {
   align-items: center;
   padding: 6rem 10rem;
   padding-bottom: 0;
+  flex: 9;
 }
 
 .chats {
@@ -294,4 +333,10 @@ body {
 .individual {
   display: flex;
   gap: 1rem;
+}
+
+.addBtn {
+  width: 2.5rem;
+  margin-right: 1rem;
+  filter: brightness(0) invert(1);  
 }

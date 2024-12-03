@@ -15,6 +15,32 @@ function App() {
   const [isTranscribing, setIsTranscribing] = useState(false);
   const [messages, setMessages] = useState([]);
   const [conversationId, setConversationId] = useState(null);
+  const [recentConversations, setRecentConversations] = useState([]);
+
+  const fetchRecentConversations = async () => {
+    if (!conversationId) return;
+    try {
+      console.log("Fetching recent conversations for ID:", conversationId);
+      const response = await axios.get(`http://localhost:8080/conversation/recent?currentId=${conversationId}`);
+      console.log("Recent conversations response:", response.data);
+      setRecentConversations(response.data);
+    } catch (error) {
+      console.error("Error fetching recent conversations:", error.response?.data || error.message);
+    }
+  };
+
+  const loadConversation = async (id) => {
+    try {
+      const response = await axios.get(`http://localhost:8080/conversation/${id}`);
+      const conversation = response.data;
+      setMessages(conversation.messages.map(msg => ({
+        text: msg.content,
+        isBot: !msg.isUser
+      })));
+    } catch (error) {
+      console.error("Error loading conversation:", error);
+    }
+  };
 
   useEffect(() => {
     msgEnd.current.scrollIntoView();
@@ -23,6 +49,10 @@ function App() {
   useEffect(() => {
     startNewConversation();
   }, []);
+
+  useEffect(() => {
+    fetchRecentConversations();
+  }, [messages]);
 
   const startNewConversation = async () => {
     try {
@@ -39,7 +69,7 @@ function App() {
 
   const sendMessageToBackend = async (message) => {
     try {
-      const response = await axios.post(`http://localhost:8080/conversation/${conversationId}`, { message });
+      const response = await axios.post(`http://localhost:8080/conversation/${conversationId}/message`, { message });
       return response.data.response;
     } catch (error) {
       console.error("Error sending message to backend:", error);
@@ -143,6 +173,22 @@ function App() {
             <img src={newConversation} alt="new chat" className="addBtn" />
             New Conversation
           </button>
+        </div>
+        <div className="lowerSide">
+          <h2 className="historyHeader">History</h2>
+          <div className="conversationList">
+            {recentConversations.map(conv => (
+              <div
+                key={conv.id}
+                className="conversationItem"
+                onClick={() => loadConversation(conv.id)}
+              >
+                <div className="conversationPreview">
+                  {conv.messages[0]?.content.substring(0, 50)}...
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
