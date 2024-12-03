@@ -277,6 +277,91 @@ body {
   color: black;
 }
 
+.chat-container.bot .chat {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.chat-container.bot .chat p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.chat-container.bot .chat h1,
+.chat-container.bot .chat h2,
+.chat-container.bot .chat h3,
+.chat-container.bot .chat h4,
+.chat-container.bot .chat h5,
+.chat-container.bot .chat h6 {
+  margin: 0.5em 0;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.chat-container.bot .chat code {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 1.2rem;
+}
+
+.chat-container.bot .chat pre {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 0.5em 0;
+}
+
+.chat-container.bot .chat pre code {
+  background-color: transparent;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.chat-container.bot .chat ul,
+.chat-container.bot .chat ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+.chat-container.bot .chat li {
+  margin: 0.2em 0;
+}
+
+.chat-container.bot .chat blockquote {
+  border-left: 4px solid #ddd;
+  margin: 0.5em 0;
+  padding-left: 1em;
+  color: #555;
+}
+
+.chat-container.bot .chat a {
+  color: #00629B;
+  text-decoration: none;
+}
+
+.chat-container.bot .chat a:hover {
+  text-decoration: underline;
+}
+
+.chat-container.bot .chat img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin: 0.5em 0;
+}
+
+.chat-container.user .chat {
+  background-color: #00629B;
+  color: #fff;
+}
+
+.chat-container.user .chat p {
+  margin: 0;
+  line-height: 1.4;
+}
+
 .chatFooter {
   margin-top: auto;
   width: 100%;
@@ -339,4 +424,29 @@ body {
   width: 2.5rem;
   margin-right: 1rem;
   filter: brightness(0) invert(1);  
+}
+
+.return-to-current {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.return-btn {
+  background-color: #00629B;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.return-btn:hover {
+  background-color: #004d7a;
 }

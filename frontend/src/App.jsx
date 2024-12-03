@@ -6,6 +6,7 @@ import record from "./assets/record.svg";
 import medical from "./assets/medical.svg";
 import newConversation from "./assets/new_conversation.svg";
 import user from "./assets/user.svg";
+import ReactMarkdown from 'react-markdown';
 
 function App() {
   const [input, setInput] = useState("");
@@ -16,6 +17,8 @@ function App() {
   const [messages, setMessages] = useState([]);
   const [conversationId, setConversationId] = useState(null);
   const [recentConversations, setRecentConversations] = useState([]);
+  const [isViewingHistory, setIsViewingHistory] = useState(false);
+  const [currentConversationMessages, setCurrentConversationMessages] = useState(null);
 
   const fetchRecentConversations = async () => {
     if (!conversationId) return;
@@ -31,37 +34,49 @@ function App() {
 
   const loadConversation = async (id) => {
     try {
+      // Store current conversation messages if not already stored
+      if (!isViewingHistory && !currentConversationMessages) {
+        setCurrentConversationMessages(messages);
+      }
+      setIsViewingHistory(true);
       const response = await axios.get(`http://localhost:8080/conversation/${id}`);
       const conversation = response.data;
       setMessages(conversation.messages.map(msg => ({
         text: msg.content,
-        isBot: !msg.isUser
+        isBot: !msg.is_user
       })));
     } catch (error) {
       console.error("Error loading conversation:", error);
     }
   };
 
-  useEffect(() => {
-    msgEnd.current.scrollIntoView();
-  }, [messages]);
-
-  useEffect(() => {
-    startNewConversation();
-  }, []);
-
-  useEffect(() => {
-    fetchRecentConversations();
-  }, [messages]);
+  const returnToCurrentConversation = () => {
+    if (currentConversationMessages) {
+      setMessages(currentConversationMessages);
+      setIsViewingHistory(false);
+    }
+  };
 
   const startNewConversation = async () => {
     try {
+      // Save the old conversation ID for history update
+      const oldConversationId = conversationId;
+      
+      // Start new conversation
       const response = await axios.post('http://localhost:8080/conversation/new');
       setConversationId(response.data.id);
       setMessages([{
         text: "Start a conversation with ChatGP",
         isBot: true,
       }]);
+      setIsViewingHistory(false);
+      setCurrentConversationMessages(null);
+
+      // Update recent conversations to include the previous conversation
+      if (oldConversationId) {
+        const historyResponse = await axios.get(`http://localhost:8080/conversation/recent?currentId=${response.data.id}`);
+        setRecentConversations(historyResponse.data);
+      }
     } catch (error) {
       console.error("Error starting new conversation:", error);
     }
@@ -78,17 +93,21 @@ function App() {
   };
 
   const handleSend = async () => {
-    if (!input) return;
+    if (!input || isViewingHistory) return;
     const text = input;
     setInput("");
-    setMessages([...messages, { text, isBot: false }]);
+    setMessages(prev => {
+      const newMessages = [...prev, { text, isBot: false }];
+      setCurrentConversationMessages(newMessages);
+      return newMessages;
+    });
     try {
       const res = await sendMessageToBackend(text);
-      setMessages([
-        ...messages,
-        { text, isBot: false },
-        { text: res, isBot: true },
-      ]);
+      setMessages(prev => {
+        const newMessages = [...prev, { text: res, isBot: true }];
+        setCurrentConversationMessages(newMessages);
+        return newMessages;
+      });
     } catch (error) {
       console.error("Error in handleSend:", error);
     }
@@ -155,6 +174,18 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    msgEnd.current.scrollIntoView();
+  }, [messages]);
+
+  useEffect(() => {
+    startNewConversation();
+  }, []);
+
+  useEffect(() => {
+    fetchRecentConversations();
+  }, [messages]);
+
   return (
     <div className="App">
       <div className="sideBar">
@@ -194,6 +225,13 @@ function App() {
 
       <div className="main">
         <div className="chats">
+          {isViewingHistory && (
+            <div className="return-to-current">
+              <button onClick={returnToCurrentConversation} className="return-btn">
+                Return to Current Conversation
+              </button>
+            </div>
+          )}
           {messages.map((message, i) => (
             <div key={i} className={message.isBot ? "chat-container bot" : "chat-container user"}>
               {message.isBot && (
@@ -204,7 +242,11 @@ function App() {
                 />
               )}
               <div className="chat">
-                <p className="txt">{message.text}</p>
+                {message.isBot ? (
+                  <ReactMarkdown>{message.text}</ReactMarkdown>
+                ) : (
+                  <p className="txt">{message.text}</p>
+                )}
               </div>
               {!message.isBot && (
                 <img
@@ -232,18 +274,11 @@ function App() {
 
             <input
               type="text"
-              placeholder={
-                isRecording
-                  ? "Recording in progress..."
-                  : isTranscribing
-                  ? "Converting to text..."
-                  : "Send a message"
-              }
+              placeholder={isViewingHistory ? "Start a new conversation to chat" : isRecording ? "Recording in progress..." : isTranscribing ? "Converting to text..." : "Send a message"}
               value={input}
               onKeyDown={handleEnter}
-              onChange={(e) => {
-                setInput(e.target.value);
-              }}
+              onChange={(e) => setInput(e.target.value)}
+              disabled={isViewingHistory}
             />
 
             <button className="send" onClick={handleSend}>

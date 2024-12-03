@@ -2,94 +2,65 @@
  #### Retrieved Documents #### 
 
 Document 1
-Content: FIGURE 4.22 Development of Cancer Note the change in cell size, nucleus size, and organization in the tissue.
-INTER ACTIVE LINK
-Watch this video (http://openstax.org/l/tumor) to learn more about tumors. What is a tumor?
-Cancer treatments vary depending on the disease’s type and stage. Traditional approaches, including surgery,
-radiation, chemotherapy, and hormonal therapy, aim to remove or kill rapidly dividing cancer cells, but these
-strategies have their limitations. Depending on a tumor’s location, for example, cancer surgeons may be unable to
-remove it. Radiation and chemotherapy are difficult, and it is often impossible to target only the cancer cells. The
-treatments inevitably destroy healthy tissue as well. To address this, researchers are working on pharmaceuticals
-that can target specific proteins implicated in cancer-associated molecular pathways.
-154 4 • The Tissue Level of Organization
-Access for free at openstax.org
+Content: be repeated at the first sign of recurrence of bronchial infection.  
+2) Control of bronchospasm: β-agonists like salbutamol, or one of the theophyllines can 
+be used. Corticosteroids do not have a major role in maintenance treatment. 
+3) Facilitation of drainage of bronchial secretion: adequate hydration with oral fluids is 
+essential to prevent drying of secretions.  Inhalation of mist, postural drainage, and 
+chest exercise may help. 
+4) Hypoxemia: this will lead to cor-pulmonale in patients with predominant c.bronchitis. 
+Oxygen should be given in such patients with hypoxia, and in severe cases a portable 
+oxygen therapy ( 16 hrs /day) for home use is recommended.                                 
+5) Control of heart failure : the most important measures are correction of hypoxemia, 
+administration of diuretics and restriction of sodium intake. 
+6) Exercise: prolonged inactivity leads to exercise intolerance. Regular exercise as long
 
 Document 2
-Content: The commnly used combinations of chemotherapy include  
-o MOPP: mustine, vincristine (oncovine), procarbatine, predinisolone  
-o ABVD : adramycin, bleomycine, vinblastin, decarbazine  
-o This combination therapy is either used alone or MOPP – ABVD hybrid given for 
-6 cycles (or 4 cycles after full remission). 
-3.  Relapse cases are  better treated with autologous Bone marrow transplantation with 
-total body irradiation and high dose chemotherapy.   
-Prognosis – depends on stage  
-Five-year survival being 
- Stages I and II:  85%  
- Stage   III A:  70% 
- Stages III B & IV: 50%
+Content: Internal Medicine 
+ 
+ 
+167
+• Basic treatment for most patients is symptomatic with bed rest, antipyretics, nasal 
+decongestants & steam inhalation.  
+ 
+2.3 Acute Bronchitis 
+It is an acute inflammation of the tracheobronchial tree, generally self-limiting and with eventual 
+complete healing and return to normal function. It could be caused by infections or irritants.  
+Etiology:  
+• Acute infectious bronchitis is often part an acute upper respiratory tract infection (URTI). 
+It may develop after a common cold or other viral infection of the nasopharynx, throat or 
+tracheobronchial tree, often with secondary bacterial infection.  
+• Acute irritative bronchitis  is caused by various mineral and vegetable dusts, volatile 
+solvents, tobacco or other smoke.  
+Symptoms and signs:  
+• Acute infectious bronchitis is often preceded by symptoms of URTI, coryza, malaise, 
+chilliness, slight fever, back and muscle pain and sore throat.
 
 Document 3
 Content: Internal Medicine 
  
  
-412
-Table VI-2-3. The treatment of acute leukemias (Cytotoxic drugs & phases of treatment).  
-  
-Phase of treatment ALL AML 
-Remission induction Combination of vincristine 
-Prednisolone and L 
-asparaginase Daunorubucin 
-for 4 weeks 
-Daunorubucin+ cytosine 
-arabinoside 4weeks (called 
-3+7 regimen 
-Continuation/intensification 
-phase 
-Combination of 6-
-mercaptopurine & 
-methotrexate+ Bone marrow 
-transplantation 
-2-3 intensive cycles of the 
-same as above or high dose 
-of cytosine arabinoside+ bone 
-marrow transplantation for 
-young patients 
-CNS prophylaxis Radiation to the whole brain 
-Combined with intra-thecal 
-methotrexate (given by 
-lumber puncture) 
-No benefit because CNS 
-relapse occurs only with 
-systemic relapse. Therefore, 
-it is not given.  
-Maintenance oral 6 -mercaptopurine &  
-Methotrexate 
-No benefit 
- 
-B) Supportive treatment is applicable for both ALL & AML 
-b) For patients with severe anemia and thrombocytopenia  (especially platelet count
+189
+Course and Prognosis 
+In the early stage of COPD, some reversal of airway obstruction and considerable 
+symptomatic improvement can often be obtained with therapy, but the long-term prognosis is 
+less favorable in such patients.  
+Treatment: so far no curative treatment.  
+• Therapy is directed at relieving symptoms, controlling potentially fatal exacerbations, 
+and slowing of the progression of the disorder.  
+• Avoidance of bronchial irritants, especially cessation of smoking, is of primary 
+importance. 
+Thus, the treatment is outlined as follows: 
+1) Treatment of infection: COPD patients with purulent sputum should be treated with a 
+broad spectrum antibiotic. Commonly used drugs include co-trimoxazole 980mg 
+POBID or TTC or Ampicillin 250 - 500mg four times a day for 10 days. The course can 
+be repeated at the first sign of recurrence of bronchial infection.  
+2) Control of bronchospasm: β-agonists like salbutamol, or one of the theophyllines can
 
 Document 4
-Content: Internal Medicine 
- 
- 
-422
-Stage 2:  2 or more lymph node areas on the same side of the diaphragm involved  
-Stage 3:   Disease involving lymph nodes above and below diaphragm; splenic 
-involvement is included here. 
-Stage 4:  Extra-nodal site involvement (Liver, bone marrow and other extra nodal sites) 
-Depending on the presence or absence of constitutional symptoms the stages are further 
-classified as A (no constitutional symptoms) and B (presence of constitutional symptoms.) 
- 
-Treatment  
-1. Radiotherapy – mainstay for stage I and II diseases; used for stage III and IV with 
-chemotherapy. 
-2. Chemotherapy  
-• Cyclical chemotherapy for stage III and IV diseases  
-• In stage I and II patient with bulky disease  
-E.g.  - Mediastinal widening by 1/3rd  
-Lymph node > 10 cm in diameter 
-The commnly used combinations of chemotherapy include  
-o MOPP: mustine, vincristine (oncovine), procarbatine, predinisolone  
-o ABVD : adramycin, bleomycine, vinblastin, decarbazine
+Content: bronchodilators. 
+3) O 2 therapy: may be given in patients with hypoxemia. 
+4) Surgical resection  of the affected part is indicated when bronchiectasis is localized, 
+and in those with recurrent massive hemoptysis that fails to respond to conservative 
+treatment. This is effective if done early in life.
 
